@@ -1,8 +1,8 @@
 const Navbar = () => {
     return (
         <div id="btns">
-            <button>Sign In</button>
-            <button>Create an Account</button>
+            <a href="/">Log in</a>
+            <a href="/">Create an Account</a>
         </div>
     )
 }

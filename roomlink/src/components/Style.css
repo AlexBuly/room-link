@@ -42,11 +42,12 @@
     gap: 1em;
 }
 
-button {
+#btns a {
     background-color:  #028833;
     color: white;
     border: 2px solid white;
     border-radius: 1em;
     cursor: pointer;
     padding: 5px;
+    text-decoration: none;
 }
