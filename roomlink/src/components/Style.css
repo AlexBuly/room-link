@@ -72,3 +72,14 @@ form {
 label {
     margin-right: 1em;
 }
+
+.footer {
+    background: black;
+    height: 10vh;
+}
+
+@media screen and (max-width: 1000px) {
+    fieldset {
+        height: 20%;
+    }
+}
