@@ -2,7 +2,7 @@ const Login = () => {
     return (
      <div className="login">
         <fieldset>
-        < h1>Log in</h1> 
+        <h1>Log in</h1> 
             <form action="post">
                 <div className="username">
                     <label htmlFor="username">Username:</label>

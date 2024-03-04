@@ -6,6 +6,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Footer from './components/Footer';
 import './components/Style.css';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/SignUp" element={<SignUp/>}/>
         </Routes>
+        <Home/>
         <Footer/>
       </Router>
     </div>
