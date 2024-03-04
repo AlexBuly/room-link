@@ -52,7 +52,8 @@
     text-decoration: none;
 }
 
-.login {
+.login,
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
