@@ -60,6 +60,12 @@
     height: 90vh;
 }
 
+.sign-up {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
 fieldset {
     height: 40%;
     display: grid;

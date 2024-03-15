@@ -1,6 +1,8 @@
 const SignUp = () => {
     return (
-        <h1>Create Account</h1>
+        <div className="sign-up">
+            <h1>Create Account</h1>
+        </div>
     )
 }
 
