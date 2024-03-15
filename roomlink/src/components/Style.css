@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Galindo&family=Karma:wght@300;400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,12 +30,12 @@
 
 .nav-logo {
     text-decoration: none;
-    font-size: 1.2em;
-    color: #00AC3E;
-    border: 2px solid #00AC3E;
+    font-size: 1.5em;
+    background: linear-gradient(to right, #00AC3E 0%, #005A21 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 5px;
-    font-style: italic;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Karma", serif;
     font-weight: 700;
 }
 
