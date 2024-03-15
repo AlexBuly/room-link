@@ -83,3 +83,7 @@ label {
     background: black;
     height: 10vh;
 }
+
+.home {
+    display: block;
+}
