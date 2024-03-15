@@ -13,7 +13,7 @@ const SignUp = () => {
                     <label htmlFor="pwd">Password:</label>
                     <input type="password" id="pwd" name="pwd"/>
                 </div>
-                <button type="sumbit">Create</button>
+                <button type="sumbit" className="btn btn-primary">Create</button>
             </form>
         </fieldset> 
         </div>

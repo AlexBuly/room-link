@@ -36,7 +36,7 @@
     -webkit-text-fill-color: transparent;
     padding: 5px;
     font-family: "Karma", serif;
-    font-weight: 700;
+   font-weight: 700;
 }
 
 #btns {
@@ -67,6 +67,8 @@ fieldset {
     height: 40%;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    border: 2px solid black;
+    padding: 1em;
 }
 
 form {
@@ -80,10 +82,4 @@ label {
 .footer {
     background: black;
     height: 10vh;
-}
-
-@media screen and (max-width: 1000px) {
-    fieldset {
-        height: 20%;
-    }
 }
