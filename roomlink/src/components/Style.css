@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     margin: 0;
+    
 }
 
 .navbar {
@@ -15,6 +16,10 @@
     justify-content: center;
     z-index: 999;
     top: 0;
+}
+
+.navbar-toggler-icon {
+    color: white;
 }
 
 .nav-container {
@@ -30,21 +35,26 @@
 
 .nav-logo {
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.9em;
     background: linear-gradient(to right, #00AC3E 0%, #005A21 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 5px;
     font-family: "Karma", serif;
-   font-weight: 700;
+    font-weight: 700;
+}
+
+h1.nav-logo {
+    font-size: 3em;
 }
 
 #btns {
     display: flex;
+    justify-content: start;
 }
 
  .nav-link {
-    background-color:  #028833;
+    background-color: #028833;
     color: white;
     border: 2px solid white;
     border-radius: 1em;
@@ -54,12 +64,15 @@
 }
 
 .login,
-.home,
 .sign-up {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90vh;
+}
+
+.home {
+    height: 150vh;
 }
 
 fieldset {
@@ -121,4 +134,57 @@ label {
 
 .navbar-toggle.collapsed span:nth-child(3) {
     opacity: 1;
+}
+
+header {
+    background-color: #00AC3E;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    height: 90%;
+    background-color: #92caa8;
+}
+
+.match-section {
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: lightgrey;
+    margin: 1% 6% 1% 6%;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imgs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img {
+    height: 9em;
+}
+
+.match {
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    margin-top: 15%;
+}
+
+.right {
+    text-align: right;
+    align-self: end;
 }
