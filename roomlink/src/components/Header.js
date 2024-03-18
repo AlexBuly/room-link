@@ -1,33 +1,28 @@
 import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
-        /*<div className="navbar">
-            <div class ="nav-container">
-               <Link to="/Home"  className="nav-logo"><h1>RoomLink</h1></Link>
-                <div id="btns">
-                    <Link to="/Login">Log in</Link>
-                    <Link to="/SignUp">Create an Account</Link>
-                    <Link to="/Home">Home</Link>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <Link to="/Home" class="nav-logo">RoomLink</Link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <Link to="/Home" class="nav-link">Home</Link>
+                </li>
+                <li class="nav-item">
+                    <Link to="/Login" class="nav-link">Log in</Link>
+                </li>
+                <li class="nav-item">
+                <Link to="/SignUp" class="nav-link">Create an Account</Link>
+                </li>
+            </ul>
             </div>
-        </div>*/
-        <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-             <Link to="/Home"  className="nav-logo"><h1>RoomLink</h1></Link>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav ml-auto">
-        <div id="btns">
-                <Link to="/Login">Log in</Link>
-                <Link to="/SignUp">Create an Account</Link>
-                 <Link to="/Home">Home</Link>
-        </div>
-      </ul>
-    </div>
-  </nav>
+      </nav>
 
     )
 }
 
-export default Header
+export default Header;
