@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const AuthModal = () => {
+const SignUp = () => {
     const isSignUp = false;
 
     const [username, setUsername] = useState('');
@@ -36,7 +36,7 @@ const AuthModal = () => {
     }
 
     return (
-        <div className="auth-modal">
+        <div className="sign-up">
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <label htmlFor="username">Username:</label>
@@ -74,4 +74,4 @@ const AuthModal = () => {
     )
 }
 
-export default AuthModal;
+export default SignUp;

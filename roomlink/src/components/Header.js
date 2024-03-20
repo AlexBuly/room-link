@@ -17,7 +17,7 @@ const Header = () => {
                      <Link to="/Login" class="nav-link">{authToken ? 'Sign out' : 'Log in'}</Link>
                 </li>
                 <li class="nav-item">
-                <Link to="/AuthModal" class="nav-link">{!authToken ? 'Create Account' : ''}</Link>
+                <Link to="/SignUp" class="nav-link">{!authToken ? 'Create Account' : ''}</Link>
                 </li>
             </ul>
             </div>
