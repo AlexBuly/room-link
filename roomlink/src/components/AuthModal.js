@@ -1,15 +1,39 @@
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthModal = () => {
-    const [username, setUsername] = useState(null);
-    const [password, setPassword] = useState(null);
-    const [passwordCheck, setPasswordCheck] = useState(null);
-
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-    }
-
     const isSignUp = false;
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordCheck, setPasswordCheck] = useState('');
+    const [error, setError] = useState('');
+
+    let navigate = useNavigate();
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        try {
+            if (isSignUp &&(password !== passwordCheck)) {
+                setError("Passwords don't match");
+                return
+            }
+            console.log("posting", username, password); 
+            navigate('/survey');
+            const response = await axios.post('http://localhost:8000/signup', {username, password});
+            return response;
+            
+                
+
+        } catch(error) {
+            if (error.response.status === 409) {
+                setError("Username already exists. Please choose a different username.");
+            } else {
+                setError("An error occurred. Please try again.");
+            }
+        }
+    }
 
     return (
         <div className="auth-modal">
@@ -42,7 +66,8 @@ const AuthModal = () => {
                     onChange={(e) => setPasswordCheck(e.target.value)}
                     />
                     <br/>
-                    <button className="btn btn-primary" type="submit">{isSignUp ? "Log in" : "Sign up"}</button>
+                    <button className="btn btn-primary" type="submit">Sign Up</button>
+                    <p>{error}</p>
                 </fieldset>
             </form>
         </div>

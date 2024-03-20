@@ -7,6 +7,7 @@ import AuthModal from './components/AuthModal';
 import Footer from './components/Footer';
 import './components/Style.css';
 import Home from './components/Home';
+import Survey from './components/Survey';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/AuthModal" element={<AuthModal/>}/>
           <Route path="/Home" element={<Home/>}/>
+          <Route path="/survey" element={<Survey/>}/>
         </Routes>
         <Footer/>
       </Router>
