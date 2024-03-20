@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Header = () => {
+    const authToken = false;
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <Link to="/Home" class="nav-logo">RoomLink</Link>
@@ -13,10 +14,10 @@ const Header = () => {
                     <Link to="/Home" class="nav-link">Home</Link>
                 </li>
                 <li class="nav-item">
-                    <Link to="/Login" class="nav-link">Log in</Link>
+                     <Link to="/Login" class="nav-link">{authToken ? 'Sign out' : 'Log in'}</Link>
                 </li>
                 <li class="nav-item">
-                <Link to="/SignUp" class="nav-link">Create an Account</Link>
+                <Link to="/AuthModal" class="nav-link">{!authToken ? 'Create Account' : ''}</Link>
                 </li>
             </ul>
             </div>

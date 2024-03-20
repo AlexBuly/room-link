@@ -64,7 +64,7 @@ h1.nav-logo {
 }
 
 .login,
-.sign-up {
+.auth-modal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +75,7 @@ h1.nav-logo {
     height: 150vh;
 }
 
-fieldset {
+.fieldset {
     height: 40%;
     display: grid;
     grid-template-rows: 1fr 2fr;
