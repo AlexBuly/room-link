@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+//import { useCookies } from "react-cookie";
 
 const SignUp = () => {
     const isSignUp = false;
@@ -9,6 +10,7 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [passwordCheck, setPasswordCheck] = useState('');
     const [error, setError] = useState('');
+   // const [cookies, setCookie, removeCookie] = useCookies(['user']);
 
     let navigate = useNavigate();
 
@@ -20,8 +22,13 @@ const SignUp = () => {
                 return
             }
             console.log("posting", username, password); 
-            navigate('/survey');
+            navigate('/Home');
+            
             const response = await axios.post('http://localhost:8000/signup', {username, password});
+            //setCookie("Username", response.data.username);
+            
+            //cookies = setCookie("UserId", response.data.userId);
+            //setCookie("AuthToken", response.data.token);
             return response;
             
                 

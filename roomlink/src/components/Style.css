@@ -71,6 +71,11 @@ h1.nav-logo {
     height: 90vh;
 }
 
+.survey {
+    display: flex;
+    height: 90vh;
+    align-items: start;
+}
 .home {
     height: 150vh;
 }
