@@ -73,8 +73,16 @@ h1.nav-logo {
 
 .survey {
     display: flex;
-    height: 90vh;
+    height: 120vh;
     align-items: start;
+    background-color: #92caa8;
+}
+
+.survey fieldset {
+    background-color: #00AC3E;
+    margin: 5%;
+    padding: 1em;
+    border-radius: 1em;
 }
 .home {
     height: 150vh;
@@ -193,3 +201,4 @@ main {
     text-align: right;
     align-self: end;
 }
+
