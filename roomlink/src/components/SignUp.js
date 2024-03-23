@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
-    const isSignUp = false;
+    const isSignUp = true;
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -23,8 +23,10 @@ const SignUp = () => {
                 setError("Passwords don't match");
                 return
             }
-            console.log("posting", username, password); 
-            navigate('/survey');
+            console.log("posting", username, password);
+            
+            
+             navigate('/survey');
             
             const response = await axios.post('http://localhost:8000/signup', {username, password});
             
@@ -68,13 +70,13 @@ const SignUp = () => {
                     />
                     <br/>
                     <label htmlFor="pwd-check">Confirm password:</label>
-                    <input 
+                    {isSignUp &&<input 
                     type="password" 
                     name="pwd-check" 
                     id="pwd-check" 
                     required={true}
                     onChange={(e) => setPasswordCheck(e.target.value)}
-                    />
+                    />}
                     <br/>
                     <button className="btn btn-primary" type="submit">Sign Up</button>
                     <p>{error}</p>

@@ -64,7 +64,8 @@ h1.nav-logo {
 }
 
 .login,
-.sign-up {
+.sign-up,
+.feed {
     display: flex;
     justify-content: center;
     align-items: center;

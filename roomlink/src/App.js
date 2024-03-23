@@ -8,17 +8,30 @@ import Footer from './components/Footer';
 import './components/Style.css';
 import Home from './components/Home';
 import Survey from './components/Survey';
+import Feed from './components/Feed';
+import { useState } from 'react';
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setLoggedIn(true)
+  }
+
+  const handleLogout = () => {
+    setLoggedIn(false)
+  }
+
   return (
     <div>
       <Router>
-        <Header/>
+        <Header loggedIn={loggedIn} handleLogout={handleLogout}/>
         <Routes>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/login" element={<Login handleLogin={handleLogin}/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/Home" element={<Home/>}/>
           <Route path="/survey" element={<Survey/>}/>
+          <Route path="/feed/" element={<Feed/>}/>
         </Routes>
         <Footer/>
       </Router>

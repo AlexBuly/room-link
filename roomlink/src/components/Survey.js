@@ -93,7 +93,7 @@ const Survey = () => {
                             type="text"
                             id="gender" 
                             name="gender"
-                            required="true"
+                            required={true}
                             value={formData.gender}
                             onChange={handleChange}
                             />
