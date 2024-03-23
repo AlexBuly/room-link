@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-//import { useCookies } from "react-cookie";
+//import { useCookies } from "react-cookie"
+
 
 const SignUp = () => {
     const isSignUp = false;
@@ -10,35 +11,37 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [passwordCheck, setPasswordCheck] = useState('');
     const [error, setError] = useState('');
-   // const [cookies, setCookie, removeCookie] = useCookies(['user']);
+    //const [cookies, setCookie, removeCookie] = useCookies(['user']);
+    
 
     let navigate = useNavigate();
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
         try {
-            if (isSignUp &&(password !== passwordCheck)) {
+            if (password !== passwordCheck) {
                 setError("Passwords don't match");
                 return
             }
             console.log("posting", username, password); 
-            navigate('/Home');
+            navigate('/survey');
             
             const response = await axios.post('http://localhost:8000/signup', {username, password});
-            //setCookie("Username", response.data.username);
             
-            //cookies = setCookie("UserId", response.data.userId);
-            //setCookie("AuthToken", response.data.token);
+           document.cookie = `Username=${response.data.username}`
+           document.cookie = `UserId=${response.data.userId}`
+           document.cookie = `AuthToken=${response.data.token}`
+
             return response;
             
                 
-
         } catch(error) {
-            if (error.response.status === 409) {
+            console.log(error);
+            /*if (error.response.status === 409) {
                 setError("Username already exists. Please choose a different username.");
             } else {
                 setError("An error occurred. Please try again.");
-            }
+            }*/
         }
     }
 

@@ -18,7 +18,7 @@ const Survey = () => {
                     type="text" 
                     id="last-name"
                     name="last-name"
-                    required="true"
+                    required={true}
                     />
                 </div>
             </form>
