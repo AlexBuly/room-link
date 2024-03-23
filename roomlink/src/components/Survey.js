@@ -29,7 +29,7 @@ const Survey = () => {
     }
     return (
         <div className="survey">
-            <section>
+            <section id="info">
                 <form onSubmit={handleSubmit}>
                     <fieldset>
                         <h2>Create Account</h2>
@@ -158,9 +158,9 @@ const Survey = () => {
                     </fieldset>
                 </form>
             </section>
-            <section>
+            <section id="photo">
                 <div className="photo-container">
-                    
+
                 </div>
             </section>
         </div>
