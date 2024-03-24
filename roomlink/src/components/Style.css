@@ -64,11 +64,16 @@ h1.nav-logo {
 }
 
 .login,
-.sign-up,
-.feed {
+.sign-up {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90vh;
+    background-color: #92caa8;
+}
+
+.feed {
+    display: block;
     height: 90vh;
     background-color: #92caa8;
 }

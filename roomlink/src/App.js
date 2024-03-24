@@ -9,6 +9,7 @@ import './components/Style.css';
 import Home from './components/Home';
 import Survey from './components/Survey';
 import Feed from './components/Feed';
+import UserList from './components/UserList';
 import { useState } from 'react';
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/Home" element={<Home/>}/>
           <Route path="/survey" element={<Survey/>}/>
-          <Route path="/feed/" element={<Feed/>}/>
+          <Route path="/feed" element={<Feed/>}/>
+          <Route path="/users" element={<UserList />}/>
         </Routes>
         <Footer/>
       </Router>

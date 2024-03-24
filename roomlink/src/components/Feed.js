@@ -1,8 +1,10 @@
 // Where profiles of individuals can be viewed 
+import UserList from "./UserList";
+
 const Feed = () => {
     return (
         <div className="feed">
-            <h1>Hello</h1>
+            <UserList/>
         </div>
     )
 }
