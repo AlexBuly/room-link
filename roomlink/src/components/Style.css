@@ -70,6 +70,7 @@ h1.nav-logo {
     justify-content: center;
     align-items: center;
     height: 90vh;
+    background-color: #92caa8;
 }
 
 .survey {
@@ -79,11 +80,15 @@ h1.nav-logo {
     background-color: #92caa8;
 }
 
-.survey fieldset {
+fieldset {
     background-color: #00AC3E;
     margin: 5%;
     padding: 1em;
     border-radius: 1em;
+}
+
+legend {
+    float: left;
 }
 
 #info {
@@ -103,16 +108,15 @@ h1.nav-logo {
     height: 150vh;
 }
 
-.fieldset {
-    height: 40%;
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    border: 2px solid black;
+.sign-up,
+.login fieldset {
     padding: 1em;
+
 }
 
-form {
-    display: grid;
+.sign-up,
+.login form {
+    display: flex;
 }
 
 label {

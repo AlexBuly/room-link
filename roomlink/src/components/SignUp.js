@@ -5,8 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
-    const isSignUp = true;
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [passwordCheck, setPasswordCheck] = useState('');
@@ -48,41 +46,44 @@ const SignUp = () => {
     }
 
     return (
-        <div className="sign-up">
-            <form onSubmit={handleSubmit}>
-                <fieldset>
-                    <label htmlFor="username">Username:</label>
-                    <input 
-                    type="text" 
-                    name="username" 
-                    id="username" 
-                    required={true} 
-                    onChange={(e) => setUsername(e.target.value)}
-                    />
-                    <br/>
-                    <label htmlFor="pwd">Password:</label>
-                    <input 
-                    type="password" 
-                    name="pwd" 
-                    id="pwd" 
-                    required={true}
-                    onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <br/>
-                    <label htmlFor="pwd-check">Confirm password:</label>
-                    {isSignUp &&<input 
-                    type="password" 
-                    name="pwd-check" 
-                    id="pwd-check" 
-                    required={true}
-                    onChange={(e) => setPasswordCheck(e.target.value)}
-                    />}
-                    <br/>
-                    <button className="btn btn-primary" type="submit">Sign Up</button>
-                    <p>{error}</p>
-                </fieldset>
-            </form>
-        </div>
+            <div className="sign-up">
+                <form onSubmit={handleSubmit}>
+                    <fieldset>
+                        <legend><h1>Create Account</h1></legend>
+                        <label htmlFor="username">Username:</label>
+                        <input 
+                        type="text" 
+                        name="username" 
+                        id="username"
+                        value={username} 
+                        required={true} 
+                        onChange={(e) => setUsername(e.target.value)}
+                        />
+                        <br/>
+                        <label htmlFor="pwd">Password:</label>
+                        <input 
+                        type="password" 
+                        name="pwd" 
+                        id="pwd" 
+                        value={password}
+                        required={true}
+                        onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <br/>
+                        <label htmlFor="pwd-check">Confirm password:</label>
+                        <input 
+                        type="password" 
+                        name="pwd-check" 
+                        id="pwd-check" 
+                        required={true}
+                        onChange={(e) => setPasswordCheck(e.target.value)}
+                        />
+                        <br/>
+                        <button className="btn btn-primary" type="submit">Sign Up</button>
+                        <p>{error}</p>
+                    </fieldset>
+                </form>
+            </div>
     )
 }
 
